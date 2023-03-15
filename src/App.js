@@ -9,6 +9,8 @@ import Orders from "./pages/orders/Orders";
 import Add from "./pages/add/Add";
 import Message from "./pages/mesage/Message";
 import Messages from "./pages/mesages/Messages";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 function App() {
@@ -35,20 +37,12 @@ function App() {
           element: <Gigs />,
         },
         {
-          path: "/gig/:id",
-          element: <Gig />,
+          path: "/myGigs",
+          element: <MyGigs />,
         },
         {
           path: "/orders",
           element: <Orders />,
-        },
-        {
-          path: "/mygigs",
-          element: <MyGigs />,
-        },
-        {
-          path: "/add",
-          element: <Add />,
         },
         {
           path: "/messages",
@@ -57,6 +51,22 @@ function App() {
         {
           path: "/message/:id",
           element: <Message />,
+        },
+        {
+          path: "/add",
+          element: <Add />,
+        },
+        {
+          path: "/gig/:id",
+          element: <Gig />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
         },
       ],
     },
